@@ -123,29 +123,3 @@ if N > 0
 else disp("Optimization impossible. Need to increase the bandwidth of the channels.");
 end 
 writematrix(qLM, 'LoadCoeffs.xlsx');
-
-
-
-
-for nf=1:nFlows
-   m = 1;
-    for k = 1:nEdges
-        if oFlows(nf, k) ~= 0
-           S(m) = sourceFlow(k);
-           T(m) = targetFlow(k);
-           F(m) = oFlows(nf, k);
-           m = m + 1;
-        end
-    end
-    H = digraph(S, T, F);
-    figure(nf)
-    plot(H, 'Layout', 'force', 'EdgeLabel', H.Edges.Weight, 'NodeColor', 'blue', 'EdgeFontSize', 10, 'EdgeColor', 'magenta', 'ArrowSize', 18,'NodeFontSize',12)
-    clear S T F H
-end
-   
-   G = digraph(source, target, Mu);
-   figure('Name','Net structure')
-   plot(G, 'Layout', 'force', 'EdgeLabel', G.Edges.Weight, 'NodeColor', [0.8500 0.3250 0.0980], 'EdgeFontSize', 10, 'EdgeColor', [0.4940 0.1840 0.5560], 'ArrowSize', 18,'NodeFontSize',12) % Визуализация структуры сети в виде направленного графа.
-   
-    
-clear all
