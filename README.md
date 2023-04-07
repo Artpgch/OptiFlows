@@ -1,5 +1,6 @@
 # OptiFlows
-Stream optimization algorithm in data transmission networks
+Stream optimization algorithm in data transmission networks.
+
 This software package consists of files OptiFlows.m and TargetFunction.m.
 File OptiFlows.m contains main algorithm code, file TargetFunction.m contains code, which forms an objective function. Initial data and the result of calculations are represented in xlsx-spreadsheets for convenient visualization. Source file NetMatrix.xlsx contains a spreadsheet with a structure of the network, source file FlowMatrix.xlsx contains a spreadsheet with structure of direction and intensity of the flows.
 According to the results of calculation, software makes files OptiFlows.xlsx and LoadCoeffs.xlsx.
